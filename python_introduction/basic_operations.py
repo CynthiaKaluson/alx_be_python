@@ -1,12 +1,15 @@
-# Assign values to two numbers for arithmetic operations
+# basic_operations.py
+
+# Assign values to variables
 number1 = 10
 number2 = 5
 
-# Print the result of adding number_1 and number_2
-print("Addition of", number1, "and", number2, "is", number1 + number2)
+# Perform arithmetic operations
+addition = number1 + number2
+subtraction = number1 - number2
+multiplication = number1 * number2
 
-# Print the result of subtracting number_2 from number_1
-print("Subtraction of", number1, "and", number2, "is", number1 - number2)
-
-# Print the result of multiplying number_1 and number_2
-print("Multiplication of", number1, "and", number2, "is", number1 * number2)
+# Display the results
+print(f"Addition of {number1} and {number2} is {addition}")
+print(f"Subtraction of {number1} and {number2} is {subtraction}")
+print(f"Multiplication of {number1} and {number2} is {multiplication}")
