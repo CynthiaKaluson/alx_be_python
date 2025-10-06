@@ -7,7 +7,7 @@ Uses Python lists to manage a shopping list
 
 def display_menu():
     """Display the main menu options"""
-    print("\nShopping List Manager")
+    print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -37,17 +37,12 @@ def main():
                 print("The shopping list is empty. Nothing to remove.")
             else:
                 print("Current shopping list:", shopping_list)
-                # Case-insensitive removal
-                item_to_remove = input("Enter the item to remove: ").strip().lower()
-                found = False
-                for item in shopping_list:
-                    if item.lower() == item_to_remove:
-                        shopping_list.remove(item)
-                        print(f"'{item}' has been removed from the shopping list.")
-                        found = True
-                        break
-                if not found:
-                    print(f"'{item_to_remove}' was not found in the shopping list.")
+                item = input("Enter the item to remove: ").strip()
+                if item in shopping_list:
+                    shopping_list.remove(item)
+                    print(f"'{item}' has been removed from the shopping list.")
+                else:
+                    print(f"'{item}' was not found in the shopping list.")
 
         elif choice == '3':
             # View the current list
