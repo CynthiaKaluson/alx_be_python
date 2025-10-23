@@ -10,14 +10,14 @@ class Book:
 class EBook(Book):
     def __init__(self, title, author, file_size):
         """Initialize eBook with additional file_size attribute"""
-        super().__init__(title, author)  # Call parent class constructor
+        super().__init__(title, author)
         self.file_size = file_size
 
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
         """Initialize print book with additional page_count attribute"""
-        super().__init__(title, author)  # Call parent class constructor
+        super().__init__(title, author)
         self.page_count = page_count
 
 
@@ -31,7 +31,7 @@ class Library:
         self.books.append(book)
 
     def list_books(self):
-        """Print details of all books in the library"""
+        """Print details of all books in the library with EXACT output format"""
         for book in self.books:
             if isinstance(book, EBook):
                 print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
